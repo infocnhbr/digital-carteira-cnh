@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhamento - CNH</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="detalhes-body">
+
+    <header class="top-bar-detalhes">
+        <a href="{{ url_for('habilitacao') }}" class="back-button-green">
+            <i class="fa-solid fa-chevron-left"></i>
+        </a>
+        <h1 class="page-title-detalhes">Detalhamento</h1>
+        <div class="info-icon-top">
+            <i class="fa-solid fa-circle-info"></i>
+        </div>
+    </header>
+
+    <div class="detalhes-header-subtitle">
+        <h2>CNH</h2>
+        <p>SENATRAN</p>
+    </div>
+
+    <main class="detalhes-container">
+
+        <div class="detalhes-photo-container">
+            <img src="{{ url_for('static', filename='13.jpeg') }}" alt="Foto do Condutor" class="detalhes-photo">
+        </div>
+
+        <div class="detalhes-list">
+
+            <div class="detalhe-item">
+                <span class="label">Nome</span>
+                <span class="value">PEDRO BERNUCCI OLIVEIRA</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Nome Civil</span>
+                <span class="value">PEDRO BERNUCCI OLIVEIRA</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Doc. Identidade/Órg. Emissor/UF</span>
+                <span class="value">MG18979677 SSP MG</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">CPF</span>
+                <span class="value">169.465.086-37</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Data de Nascimento</span>
+                <span class="value">20/12/2007</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Nacionalidade</span>
+                <span class="value">BRASILEIRO(A)</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Sexo</span>
+                <span class="value">MASCULINO</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Filiação Pai</span>
+                <span class="value">RODRIGO BARBOSA DE OLIVEIRA</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Filiação Mãe</span>
+                <span class="value">ADRIANA BERNUCCI DE OLIVEIRA</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Permissão</span>
+                <span class="value">-</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">ACC</span>
+                <span class="value">SIM</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Cat. Hab.</span>
+                <span class="value">B</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Nº Registro</span>
+                <span class="value">61946771268</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Validade</span>
+                <span class="value">10/03/2027</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">1ª Habilitação</span>
+                <span class="value">08/03/2026</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Observações</span>
+                <span class="value">-</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Local</span>
+                <span class="value">BELO HORIZONTE</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">UF</span>
+                <span class="value">MG</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Data de Emissão</span>
+                <span class="value">10/03/2026</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Número Validação CNH</span>
+                <span class="value">8102001734</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Código Validação</span>
+                <span class="value">88213563704</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Número Formulário RENACH</span>
+                <span class="value">MG487492302</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Selo Bom Condutor</span>
+                <span class="value">NAO</span>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,754 @@
+/* ==================== RESET E GERAIS ==================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==================== BARRA SUPERIOR (DASHBOARD) ==================== */
+.top-bar {
+    background-color: #0d2a5c;
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-icon .bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}
+
+.app-title {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.user-avatar-text {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ==================== MENU LATERAL (SIDEBAR) ==================== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-header {
+    padding: 20px 20px 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-logo-container {
+    margin-bottom: 15px;
+}
+
+.sidebar-logo-img {
+    max-height: 40px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #0d2a5c;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.user-info p {
+    margin: 4px 0 0;
+    font-size: 0.8rem;
+    color: #777777;
+    font-weight: 400;
+}
+
+.sidebar-menu {
+    padding: 10px 0;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #444;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #f5f5f5;
+    color: #0d2a5c;
+}
+
+.sidebar-menu li a i {
+    width: 25px;
+    font-size: 1.1rem;
+    margin-right: 15px;
+    color: #555;
+    text-align: center;
+}
+
+.menu-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 10px 0;
+}
+
+/* ==================== DASHBOARD PRINCIPAL ==================== */
+.main-content {
+    flex: 1;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.card-link {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ==================== TELA CONDUTOR ==================== */
+.top-bar-condutor {
+    background-color: #08285c;
+    color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 15px;
+}
+
+.back-button {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.page-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.condutor-container {
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+/* Card de Informações */
+.info-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+}
+
+.info-card h2 {
+    margin: 0 0 15px 0;
+    color: #0d2a5c;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.info-divider {
+    border: 0;
+    height: 1px;
+    background-color: #eaeaea;
+    margin-bottom: 18px;
+}
+
+.info-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.info-group.single-line {
+    margin-bottom: 18px;
+}
+
+.info-group .label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0d2a5c;
+    margin-bottom: 3px;
+}
+
+.info-group .value {
+    font-size: 0.85rem;
+    color: #555555;
+    font-weight: 400;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+}
+
+/* Grid de Ações do Condutor */
+.actions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.action-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 22px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: #0d2a5c;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.action-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.action-card.full-width {
+    grid-column: span 2;
+}
+
+.action-card i {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #0d2a5c;
+}
+
+.action-card span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+}
+/* ==================== TELA HABILITAÇÃO ==================== */
+.title-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.page-subtitle {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 2px;
+}
+
+/* Container ajustado para 100% de largura, sem margens laterais grandes */
+.habilitacao-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 0 10px; /* Pequeno espaçamento de 10px nas bordas da tela */
+    box-sizing: border-box;
+}
+
+.vio-text {
+    font-size: 0.9rem;
+    color: #0d2a5c;
+    margin-bottom: 12px;
+    text-align: left; /* Alinhado à esquerda */
+    width: 100%;
+}
+
+.vio-text a {
+    color: #0056b3;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Wrapper do Carrossel */
+.carousel-wrapper {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+/* Imagem até a borda */
+.cnh-img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+    cursor: zoom-in;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Indicadores do Carrossel */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 0 6px 0;
+    background-color: transparent;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.dot.active {
+    background-color: #0d2a5c;
+    transform: scale(1.2);
+}
+
+/* Botões da Habilitação - Texto à esquerda e largura total */
+.habilitacao-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.hab-button {
+    background-color: white;
+    border-radius: 10px;
+    padding: 18px 16px;
+    text-decoration: none;
+    color: #0d2a5c;
+    font-size: 0.95rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    text-align: left; /* Texto alinhado no início/esquerda do botão */
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hab-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==================== TELA DETALHES (TEXTOS À ESQUERDA ATÉ A BORDA) ==================== */
+.detalhes-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 15px 12px 40px 12px; /* Margem sutil nas bordas da tela */
+    box-sizing: border-box;
+}
+
+.detalhes-header-subtitle {
+    background-color: #e9ecef;
+    text-align: left; /* Alinhado à esquerda */
+    padding: 16px 12px;
+}
+
+.detalhes-header-subtitle h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 700;
+    text-align: left;
+}
+
+.detalhes-header-subtitle p {
+    margin: 4px 0 0;
+    font-size: 0.8rem;
+    color: #666;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.detalhe-item {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left; /* Alinhamento estritamente à esquerda */
+    width: 100%;
+}
+
+.detalhe-item .label {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 3px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.detalhe-item .value {
+    font-size: 0.95rem;
+    color: #1e293b;
+    font-weight: 700;
+    text-align: left;
+}
+/* ==================== MODAL DE ZOOM (CORRIGIDO PARA POP-UP EM TELA CHEIA) ==================== */
+.zoom-modal {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.92);
+    z-index: 99999 !important; /* Fica acima de TUDO na página */
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: zoom-out;
+}
+
+/* Quando ativo via JavaScript */
+.zoom-modal.active {
+    display: flex !important;
+}
+
+.zoom-modal-content {
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+    animation: popIn 0.25s ease-out;
+}
+
+.zoom-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100000;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.75);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* ==================== ESTILOS DO MODAL DE QR CODE ==================== */
+.qr-modal-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 320px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: popIn 0.25s ease-out;
+}
+
+.qr-modal-card h2 {
+    margin-top: 0;
+    color: #0d2a5c;
+    font-size: 1.25rem;
+}
+
+.qr-modal-card p {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.qr-code-img {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 20px auto;
+    display: block;
+    border: 1px solid #e2e8f0;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.close-qr-btn {
+    background-color: #0d2a5c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100%;
+}
+/* ==================== TELA DETALHES ==================== */
+.detalhes-body {
+    background-color: #f8f9fa;
+}
+
+.top-bar-detalhes {
+    background-color: #72a926; /* Verde característico da tela */
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-button-green {
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.page-title-detalhes {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.info-icon-top {
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.detalhes-header-subtitle {
+    background-color: #e9ecef;
+    text-align: center;
+    padding: 18px 10px;
+}
+
+.detalhes-header-subtitle h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.detalhes-header-subtitle p {
+    margin: 4px 0 0;
+    font-size: 0.8rem;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+.detalhes-container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px 16px 40px 16px;
+}
+
+.detalhes-photo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.detalhes-photo {
+    width: 130px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.detalhes-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhe-item {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.detalhe-item .label {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 3px;
+    font-weight: 400;
+}
+
+.detalhe-item .value {
+    font-size: 0.95rem;
+    color: #1e293b;
+    font-weight: 700;
+}
