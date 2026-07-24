@@ -752,3 +752,18 @@ body {
     color: #1e293b;
     font-weight: 700;
 }
+/* Exemplo genérico de centralização em CSS */
+.meu-container-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.meu-container-titulo h2,
+.meu-container-titulo p {
+    margin: 0;
+    text-align: center;
+}
