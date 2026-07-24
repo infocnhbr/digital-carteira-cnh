@@ -11,23 +11,22 @@
 <body class="detalhes-body">
 
     <header class="top-bar-detalhes">
-        <!-- Botão de voltar removido daqui -->
         <h1 class="page-title-detalhes" style="margin-left: 0;">Detalhamento</h1>
         <div class="info-icon-top">
             <i class="fa-solid fa-circle-info"></i>
         </div>
     </header>
 
-
-    <div class="detalhes-header-subtitle" style="text-align: center;">
-        <h2>CNH</h2>
-        <p>SENATRAN</p>
+    <!-- SUBTÍTULO CENTRALIZADO COM FLEXBOX (GARANTE O ALINHAMENTO NO MEIO) -->
+    <div class="detalhes-header-subtitle" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; text-align: center; margin: 15px 0;">
+        <h2 style="margin: 0; text-align: center;">CNH</h2>
+        <p style="margin: 0; text-align: center;">SENATRAN</p>
     </div>
 
     <main class="detalhes-container">
 
-        <!-- Foto com tamanho reduzido (Ajuste a largura no style se quiser maior ou menor) -->
-        <div class="detalhes-photo-container" style="text-align: center; margin-bottom: 20px;">
+        <!-- FOTO REDUZIDA E CENTRALIZADA -->
+        <div class="detalhes-photo-container" style="display: flex; justify-content: center; width: 100%; margin-bottom: 20px;">
             <img src="./static/13.jpeg" alt="Foto" style="max-width: 130px; height: auto; border-radius: 8px;">
         </div>
 
