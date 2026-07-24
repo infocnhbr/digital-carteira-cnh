@@ -757,7 +757,7 @@ body {
     width: 100%;                  /* Força a largura total */
     background-color: #e0e0e0;    /* Cor de fundo da faixa */
     text-align: center;           /* Centraliza o texto internamente */
-    padding: 15px 0;              /* Espaçamento acima e abaixo do texto */
+    padding: 100px 0;              /* Espaçamento acima e abaixo do texto */
     box-sizing: border-box;       /* Garante que o padding não estoure a tela */
 }
 
