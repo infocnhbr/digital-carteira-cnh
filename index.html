@@ -11,11 +11,8 @@
 <body class="detalhes-body">
 
     <header class="top-bar-detalhes">
-        <!-- CORRIGIDO: Removido o url_for do Flask -->
-        <a href="habilitacao.html" class="back-button-green">
-            <i class="fa-solid fa-chevron-left"></i>
-        </a>
-        <h1 class="page-title-detalhes">Detalhamento</h1>
+        <!-- Botão de voltar removido daqui -->
+        <h1 class="page-title-detalhes" style="margin-left: 0;">Detalhamento</h1>
         <div class="info-icon-top">
             <i class="fa-solid fa-circle-info"></i>
         </div>
@@ -28,8 +25,9 @@
 
     <main class="detalhes-container">
 
-        <div class="detalhes-photo-container">
-            <img src="./static/13.jpeg" alt="Foto">
+        <!-- Foto com tamanho reduzido (Ajuste a largura no style se quiser maior ou menor) -->
+        <div class="detalhes-photo-container" style="text-align: center; margin-bottom: 20px;">
+            <img src="./static/13.jpeg" alt="Foto" style="max-width: 130px; height: auto; border-radius: 8px;">
         </div>
 
         <div class="detalhes-list">
