@@ -752,18 +752,32 @@ body {
     color: #1e293b;
     font-weight: 700;
 }
-/* Exemplo genérico de centralização em CSS */
-.meu-container-titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+/* Container que ocupa toda a largura da tela (faixa de fundo) */
+.faixa-destaque {
+    width: 100%;                  /* Força a largura total */
+    background-color: #e0e0e0;    /* Cor de fundo da faixa */
+    text-align: center;           /* Centraliza o texto internamente */
+    padding: 15px 0;              /* Espaçamento acima e abaixo do texto */
+    box-sizing: border-box;       /* Garante que o padding não estoure a tela */
 }
 
-.meu-container-titulo h2,
-.meu-container-titulo p {
-    margin: 0;
+/* Estilo para os títulos dentro da faixa */
+.faixa-destaque h2,
+.faixa-destaque p {
+    margin: 0;                    /* Remove margens padrão que desalinham */
     text-align: center;
+}
+
+/* Container para centralizar imagens */
+.container-imagem {
+    display: flex;
+    justify-content: center;      /* Centraliza a imagem no eixo horizontal */
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.container-imagem img {
+    max-width: 120px;             /* Controla o tamanho da imagem */
+    height: auto;
 }
