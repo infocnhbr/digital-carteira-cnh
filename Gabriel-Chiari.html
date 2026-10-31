@@ -4,31 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhamento - CNH</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='./static/style.css') }}">
+    <link rel="stylesheet" href="./static/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="detalhes-body">
 
     <header class="top-bar-detalhes">
-        <a href="{{ url_for('habilitacao') }}" class="back-button-green">
-            <i class="fa-solid fa-chevron-left"></i>
-        </a>
-        <h1 class="page-title-detalhes">Detalhamento</h1>
+        <h1 class="page-title-detalhes" style="margin-left: 0 !important;">Detalhamento</h1>
         <div class="info-icon-top">
             <i class="fa-solid fa-circle-info"></i>
         </div>
     </header>
 
-    <div class="detalhes-header-subtitle">
-        <h2>CNH</h2>
-        <p>SENATRAN</p>
+    <!-- SUBTÍTULO FORÇADO NO CENTRO COM !IMPORTANT -->
+<!-- Exemplo genérico: Faixa cinza com largura total e texto centralizado -->
+
+    <div style="width: 100%; background-color: #f0f0f0; text-align: center; padding: 15px 0; box-sizing: border-box;">
+        <h2 style="margin: 0; text-align: center;">CNH</h2>
+        <p style="margin: 0; text-align: center;">SENATRAN</p>
     </div>
 
     <main class="detalhes-container">
 
-        <div class="detalhes-photo-container">
-            <img src="{{ url_for('static', filename='Gabriel-Chiari.jpeg') }}" alt="Foto do Condutor" class="detalhes-photo">
+        <!-- FOTO REDUZIDA E CENTRALIZADA -->
+        <div class="detalhes-photo-container" style="display: flex !important; justify-content: center !important; width: 100% !important; margin-bottom: 20px !important;">
+            <img src="./static/Gabriel-Chiari.jpeg" alt="Foto" style="max-width: 130px !important; height: auto !important; border-radius: 8px !important;">
         </div>
 
         <div class="detalhes-list">
@@ -50,12 +51,12 @@
 
             <div class="detalhe-item">
                 <span class="label">CPF</span>
-                <span class="value">120.261.106-03</span>
+                <span class="value">120.261.103-03</span>
             </div>
 
             <div class="detalhe-item">
                 <span class="label">Data de Nascimento</span>
-                <span class="value">27/06/2008</span>
+                <span class="value">27/09/2027</span>
             </div>
 
             <div class="detalhe-item">
@@ -75,7 +76,7 @@
 
             <div class="detalhe-item">
                 <span class="label">Filiação Mãe</span>
-                <span class="value">TATIANA SANTOS CHIARI FORTES</span>
+                <span class="value">TATIANA SANTOS CHIARI DORTES</span>
             </div>
 
             <div class="detalhe-item">
